@@ -89,7 +89,7 @@ class App extends Component {
 
     // -------------- Delete Done items
     if (this.state.ShowDone) {
-      const list = this.state.list.filter((item) => item.done == false);
+      const list = this.state.list.filter((item) => item.done === false);
       //console.log(oldList[0]);
       this.setState({ list });
       for (i = 1; i < oldList.length + 1; i++) {
@@ -108,12 +108,12 @@ class App extends Component {
     }
     // -------------- Delete UnDone items
     else if (this.state.ShowUnDone) {
-      const list = this.state.list.filter((item) => item.done == true);
+      const list = this.state.list.filter((item) => item.done === true);
       //console.log(oldList[0]);
       this.setState({ list });
       for (i = 1; i < oldList.length + 1; i++) {
         try {
-          if (oldList[i - 1].done == false) {
+          if (oldList[i - 1].done === false) {
             await axios.delete("http://localhost:3000/list/" + i);
           } else {
             continue;
@@ -126,15 +126,15 @@ class App extends Component {
       window.location.reload(false);
     }
     // -------------- Delete Category items
-    else if (this.state.SelectedCat != "") {
+    else if (this.state.SelectedCat !== "") {
       const list = this.state.list.filter(
-        (item) => item.type != this.state.SelectedCat
+        (item) => item.type !== this.state.SelectedCat
       );
       //console.log(oldList[0]);
       this.setState({ list });
       for (i = 1; i < oldList.length + 1; i++) {
         try {
-          if (oldList[i - 1].type == this.state.SelectedCat) {
+          if (oldList[i - 1].type === this.state.SelectedCat) {
             await axios.delete("http://localhost:3000/list/" + i);
           } else {
             continue;

@@ -49,11 +49,9 @@ class Home extends Component {
           {/* ----------------------Render list----------------------------- */}
           <div className="card-body">
             {this.props.list.map((item) => {
-              {
-                /* Categories */
-              }
-              if (this.props.SelectedCat != "") {
-                if (item.type == this.props.SelectedCat) {
+              /* Categories */
+              if (this.props.SelectedCat !== "") {
+                if (item.type === this.props.SelectedCat) {
                   return (
                     <div key={item.id}>
                       <ItemRen
@@ -66,9 +64,7 @@ class Home extends Component {
                   );
                 }
               } else if (this.props.ShowUnDone) {
-                {
-                  /* UnDone */
-                }
+                /* UnDone */
                 if (!item.done) {
                   return (
                     <div key={item.id}>
@@ -82,9 +78,7 @@ class Home extends Component {
                   );
                 }
               } else if (this.props.ShowDone) {
-                {
-                  /* Show Done */
-                }
+                /* Show Done */
                 if (item.done) {
                   return (
                     <div key={item.id}>
@@ -98,9 +92,7 @@ class Home extends Component {
                   );
                 }
               } else {
-                {
-                  /* Show All */
-                }
+                /* Show All */
                 return (
                   <div key={item.id}>
                     <ItemRen

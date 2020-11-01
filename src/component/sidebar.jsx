@@ -114,6 +114,7 @@ class SideBar extends Component {
                 );
               } else {
                 //console.log("found" + item.type);
+                return;
               }
             })}
           </DropdownButton>
