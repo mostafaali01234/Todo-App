@@ -20,7 +20,7 @@ const NavBar = () => {
   return (
     <nav
       className="navbar navbar-expand-lg navbar-dark bg-primary"
-      style="z-index: 2;"
+      style={{ zIndex: 2 }}
     >
       <a className="navbar-brand" href="/Todo-App/">
         ToDo App

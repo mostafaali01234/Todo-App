@@ -28,7 +28,7 @@ class SideBar extends Component {
       <Nav
         className="col-md-2 d-none d-md-block bg-dark sidebar"
         activeKey="/home"
-        style="z-index: 1;"
+        style={{ zIndex: 1 }}
       >
         <div className="sidebar-sticky"></div>
         <Nav.Item>
