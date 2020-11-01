@@ -1,26 +1,26 @@
 {
   "files": {
     "main.css": "/Todo-App/static/css/main.4af69279.chunk.css",
-    "main.js": "/Todo-App/static/js/main.3ff2e8df.chunk.js",
-    "main.js.map": "/Todo-App/static/js/main.3ff2e8df.chunk.js.map",
-    "runtime-main.js": "/Todo-App/static/js/runtime-main.a56c79d8.js",
-    "runtime-main.js.map": "/Todo-App/static/js/runtime-main.a56c79d8.js.map",
+    "main.js": "/Todo-App/static/js/main.38ffadc3.chunk.js",
+    "main.js.map": "/Todo-App/static/js/main.38ffadc3.chunk.js.map",
+    "runtime-main.js": "/Todo-App/static/js/runtime-main.36031f80.js",
+    "runtime-main.js.map": "/Todo-App/static/js/runtime-main.36031f80.js.map",
     "static/css/2.520080d8.chunk.css": "/Todo-App/static/css/2.520080d8.chunk.css",
-    "static/js/2.42b28421.chunk.js": "/Todo-App/static/js/2.42b28421.chunk.js",
-    "static/js/2.42b28421.chunk.js.map": "/Todo-App/static/js/2.42b28421.chunk.js.map",
-    "static/js/3.af38bcdd.chunk.js": "/Todo-App/static/js/3.af38bcdd.chunk.js",
-    "static/js/3.af38bcdd.chunk.js.map": "/Todo-App/static/js/3.af38bcdd.chunk.js.map",
+    "static/js/2.25f277c6.chunk.js": "/Todo-App/static/js/2.25f277c6.chunk.js",
+    "static/js/2.25f277c6.chunk.js.map": "/Todo-App/static/js/2.25f277c6.chunk.js.map",
+    "static/js/3.7129640e.chunk.js": "/Todo-App/static/js/3.7129640e.chunk.js",
+    "static/js/3.7129640e.chunk.js.map": "/Todo-App/static/js/3.7129640e.chunk.js.map",
     "index.html": "/Todo-App/index.html",
     "static/css/2.520080d8.chunk.css.map": "/Todo-App/static/css/2.520080d8.chunk.css.map",
     "static/css/main.4af69279.chunk.css.map": "/Todo-App/static/css/main.4af69279.chunk.css.map",
-    "static/js/2.42b28421.chunk.js.LICENSE.txt": "/Todo-App/static/js/2.42b28421.chunk.js.LICENSE.txt",
+    "static/js/2.25f277c6.chunk.js.LICENSE.txt": "/Todo-App/static/js/2.25f277c6.chunk.js.LICENSE.txt",
     "static/media/all.css": "/Todo-App/static/media/fa-solid-900.46fdbd2d.woff"
   },
   "entrypoints": [
-    "static/js/runtime-main.a56c79d8.js",
+    "static/js/runtime-main.36031f80.js",
     "static/css/2.520080d8.chunk.css",
-    "static/js/2.42b28421.chunk.js",
+    "static/js/2.25f277c6.chunk.js",
     "static/css/main.4af69279.chunk.css",
-    "static/js/main.3ff2e8df.chunk.js"
+    "static/js/main.38ffadc3.chunk.js"
   ]
 }
