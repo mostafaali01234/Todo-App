@@ -92,9 +92,9 @@ class SideBar extends Component {
 
         <Nav.Item className="ml-2">
           <DropdownButton title={dropTitle} id="collasible-nav-dropdown">
-		  // eslint-disable-next-line 
+
             {this.props.list.map((item) => {
-				// eslint-disable-next-line 
+				
               let c = 0;
               //console.log(x);
               for (let i = 0; i < x.length; i++) {
@@ -116,7 +116,7 @@ class SideBar extends Component {
                 );
               } else {
                 //console.log("found" + item.type);
-				// eslint-disable-next-line 
+				 
                 return;
               }
             })}

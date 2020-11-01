@@ -48,9 +48,9 @@ class Home extends Component {
 
           {/* ----------------------Render list----------------------------- */}
           <div className="card-body">
-		  // eslint-disable-next-line 
+		   
             {this.props.list.map((item) => {
-				// eslint-disable-next-line 
+				
               /* Categories */
               if (this.props.SelectedCat !== "") {
                 if (item.type === this.props.SelectedCat) {
