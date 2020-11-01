@@ -26,7 +26,7 @@ class SideBar extends Component {
 
     return (
       <Nav
-        className="col-md-12 d-none d-md-block bg-dark sidebar"
+        className="col-md-2 d-none d-md-block bg-dark sidebar"
         activeKey="/home"
       >
         <div className="sidebar-sticky"></div>
@@ -92,9 +92,7 @@ class SideBar extends Component {
 
         <Nav.Item className="ml-2">
           <DropdownButton title={dropTitle} id="collasible-nav-dropdown">
-
             {this.props.list.map((item) => {
-				
               let c = 0;
               //console.log(x);
               for (let i = 0; i < x.length; i++) {
@@ -116,7 +114,7 @@ class SideBar extends Component {
                 );
               } else {
                 //console.log("found" + item.type);
-				 
+
                 return;
               }
             })}

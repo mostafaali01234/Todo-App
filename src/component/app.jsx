@@ -221,25 +221,25 @@ class App extends Component {
               </div>
             }
             <div className="col ">
-              {/* <Switch>
+              <Switch>
                 <Route
                   path="/home"
-                  render={() => ( */}
-              <Home
-                list={this.state.list}
-                isDone={this.handleInDone}
-                Del={this.handleDelete}
-                DelAll={this.DeleteAll}
-                isModalOpen={this.state.isModalOpen}
-                toggleModal={this.toggleModal}
-                ShowDone={this.state.ShowDone}
-                ShowUnDone={this.state.ShowUnDone}
-                SelectedCat={this.state.SelectedCat}
-              />
-              {/* )}
+                  render={() => (
+                    <Home
+                      list={this.state.list}
+                      isDone={this.handleInDone}
+                      Del={this.handleDelete}
+                      DelAll={this.DeleteAll}
+                      isModalOpen={this.state.isModalOpen}
+                      toggleModal={this.toggleModal}
+                      ShowDone={this.state.ShowDone}
+                      ShowUnDone={this.state.ShowUnDone}
+                      SelectedCat={this.state.SelectedCat}
+                    />
+                  )}
                 />
                 <Redirect from="/" to="/home" />
-              </Switch> */}
+              </Switch>
             </div>
           </div>
         </div>
