@@ -209,15 +209,17 @@ class App extends Component {
 
         <div className="main">
           <div className="row">
-            {/* <div className="col-2 ">
-              <SideBar
-                list={this.state.list}
-                ShowDoneItems={this.ShowDoneItems}
-                ShowUnDoneItems={this.ShowUnDoneItems}
-                ShowAll={this.ShowAll}
-                ShowCat={this.ShowCat}
-              />
-            </div> */}
+            {
+              <div className="col-2 ">
+                <SideBar
+                  list={this.state.list}
+                  ShowDoneItems={this.ShowDoneItems}
+                  ShowUnDoneItems={this.ShowUnDoneItems}
+                  ShowAll={this.ShowAll}
+                  ShowCat={this.ShowCat}
+                />
+              </div>
+            }
             <div className="col ">
               {/* <Switch>
                 <Route
