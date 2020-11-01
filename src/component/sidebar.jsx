@@ -31,7 +31,8 @@ class SideBar extends Component {
         style={{ zIndex: 1 }}
       >
         <div className="sidebar-sticky"></div>
-        <Nav.Item>
+        <br />
+        <Nav.Item className="mt-5">
           <Nav.Link
             className="nLink"
             href="/Todo-App/"
