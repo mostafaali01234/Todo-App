@@ -26,7 +26,7 @@ class SideBar extends Component {
 
     return (
       <Nav
-        className="col-md-12 d-none d-md-block bg-dark sidebar"
+        className="col-md-2 d-none d-md-block bg-dark sidebar"
         activeKey="/home"
         style="z-index: 1;"
       >
