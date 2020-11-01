@@ -1,0 +1,12 @@
+.card{
+    position: relative; /* all child elements gets positioned relative to this element */
+  }
+  .card-header{
+    position: fixed; /* stay fixed on top */
+    top: 0;
+    width: 100%;
+    z-index: 1; /* needed to stay above other elements */
+  }
+  .todo-item{
+    padding-top: 50px;
+  }

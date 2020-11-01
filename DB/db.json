@@ -1,0 +1,40 @@
+{
+  "list": [
+    {
+      "id": 1,
+      "done": false,
+      "name": "Buy vegetables",
+      "type": "Groceries"
+    },
+    {
+      "id": 2,
+      "done": false,
+      "name": "Buy books",
+      "type": "Bookshop"
+    },
+    {
+      "done": true,
+      "name": "Check new phone prices",
+      "type": "InternetSurfing",
+      "id": 3
+    },
+    {
+      "done": false,
+      "name": "Study",
+      "type": "OnlineCourse",
+      "id": 4
+    },
+    {
+      "done": true,
+      "name": "Buy Bannana",
+      "type": "Groceries",
+      "id": 5
+    },
+    {
+      "done": false,
+      "name": "Playing",
+      "type": "VideoGames",
+      "id": 6
+    }
+  ]
+}
