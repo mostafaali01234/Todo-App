@@ -26,12 +26,17 @@ class SideBar extends Component {
 
     return (
       <Nav
-        className="col-md-2 d-none d-md-block bg-dark sidebar"
+        className="col-md-12 d-none d-md-block bg-dark sidebar"
         activeKey="/home"
+        style="z-index: 1;"
       >
         <div className="sidebar-sticky"></div>
         <Nav.Item>
-          <Nav.Link className="nLink" href="/home" onClick={this.props.ShowAll}>
+          <Nav.Link
+            className="nLink"
+            href="/Todo-App/"
+            onClick={this.props.ShowAll}
+          >
             <i className="fas fa-home mr-2" />
             Home
           </Nav.Link>

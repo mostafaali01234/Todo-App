@@ -48,9 +48,7 @@ class Home extends Component {
 
           {/* ----------------------Render list----------------------------- */}
           <div className="card-body">
-		   
             {this.props.list.map((item) => {
-				
               /* Categories */
               if (this.props.SelectedCat !== "") {
                 if (item.type === this.props.SelectedCat) {

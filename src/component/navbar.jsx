@@ -18,7 +18,10 @@ const NavBar = () => {
   const { date } = useDate();
 
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
+    <nav
+      className="navbar navbar-expand-lg navbar-dark bg-primary"
+      style="z-index: 2;"
+    >
       <a className="navbar-brand" href="/Todo-App/">
         ToDo App
       </a>

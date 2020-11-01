@@ -223,7 +223,7 @@ class App extends Component {
             <div className="col ">
               <Switch>
                 <Route
-                  path="/home"
+                  path="/Todo-App/"
                   render={() => (
                     <Home
                       list={this.state.list}
@@ -238,7 +238,7 @@ class App extends Component {
                     />
                   )}
                 />
-                <Redirect from="/" to="/home" />
+                <Redirect from="/" to="/Todo-App/" />
               </Switch>
             </div>
           </div>
