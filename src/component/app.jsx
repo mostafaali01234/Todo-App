@@ -209,7 +209,7 @@ class App extends Component {
 
         <div className="main">
           <div className="row">
-            <div className="col-2 ">
+            {/* <div className="col-2 ">
               <SideBar
                 list={this.state.list}
                 ShowDoneItems={this.ShowDoneItems}
@@ -217,27 +217,27 @@ class App extends Component {
                 ShowAll={this.ShowAll}
                 ShowCat={this.ShowCat}
               />
-            </div>
+            </div> */}
             <div className="col ">
-              <Switch>
+              {/* <Switch>
                 <Route
                   path="/home"
-                  render={() => (
-                    <Home
-                      list={this.state.list}
-                      isDone={this.handleInDone}
-                      Del={this.handleDelete}
-                      DelAll={this.DeleteAll}
-                      isModalOpen={this.state.isModalOpen}
-                      toggleModal={this.toggleModal}
-                      ShowDone={this.state.ShowDone}
-                      ShowUnDone={this.state.ShowUnDone}
-                      SelectedCat={this.state.SelectedCat}
-                    />
-                  )}
+                  render={() => ( */}
+              <Home
+                list={this.state.list}
+                isDone={this.handleInDone}
+                Del={this.handleDelete}
+                DelAll={this.DeleteAll}
+                isModalOpen={this.state.isModalOpen}
+                toggleModal={this.toggleModal}
+                ShowDone={this.state.ShowDone}
+                ShowUnDone={this.state.ShowUnDone}
+                SelectedCat={this.state.SelectedCat}
+              />
+              {/* )}
                 />
                 <Redirect from="/" to="/home" />
-              </Switch>
+              </Switch> */}
             </div>
           </div>
         </div>
