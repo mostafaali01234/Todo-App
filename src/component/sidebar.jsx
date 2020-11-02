@@ -33,11 +33,7 @@ class SideBar extends Component {
         <div className="sidebar-sticky"></div>
         <br />
         <Nav.Item className="mt-5">
-          <Nav.Link
-            className="nLink"
-            href="/Todo-App/"
-            onClick={this.props.ShowAll}
-          >
+          <Nav.Link className="nLink" href="#" onClick={this.props.ShowAll}>
             <i className="fas fa-home mr-2" />
             Home
           </Nav.Link>

@@ -26,6 +26,8 @@ class Home extends Component {
                 <AddNew
                   isModalOpen={this.props.isModalOpen}
                   toggleModal={this.props.toggleModal}
+                  list={this.props.list}
+                  AddHandle={this.props.Add}
                 />
               </div>
               {/* Delete All */}

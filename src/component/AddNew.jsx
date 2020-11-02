@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import axios from "axios";
+//import axios from "axios";
 import {
   Button,
   Modal,
@@ -28,15 +28,19 @@ class AddNew extends Component {
       done: false,
       name: this.state.newItem,
       type: this.state.newCat,
+      id: this.props.list.length + 1,
     };
-    if (obj.name !== "" && obj.type !== "") {
-      await axios.post("http://localhost:3000/list/", obj);
-      this.props.toggleModal();
-      window.location.reload(false);
-    }
+    this.props.AddHandle(obj);
+
+    this.setState({ newItem: "", newCat: "" });
+    // if (obj.name !== "" && obj.type !== "") {
+    //   await axios.post("http://localhost:3000/list/", obj);
+    //   this.props.toggleModal();
+    //   window.location.reload(false);
+    // }
   };
 
-  handleAdd = (e) => {
+  handleAddState = (e) => {
     //Clone
     let state = { ...this.state };
     //Edit
@@ -60,7 +64,7 @@ class AddNew extends Component {
               <input
                 name="newItem"
                 className="form-control"
-                onChange={this.handleAdd}
+                onChange={this.handleAddState}
                 type="text"
                 placeholder=""
                 value={this.state.newItem}
@@ -71,7 +75,7 @@ class AddNew extends Component {
               <input
                 name="newCat"
                 className="form-control"
-                onChange={this.handleAdd}
+                onChange={this.handleAddState}
                 type="text"
                 placeholder=""
                 value={this.state.newCat}

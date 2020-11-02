@@ -2,8 +2,8 @@ import React, { Component } from "react";
 import NavBar from "./navbar";
 import SideBar from "./sidebar";
 import { Route, Switch, Redirect } from "react-router-dom";
-import axios from "axios";
-import { toast } from "react-toastify";
+//import axios from "axios";
+//import { toast } from "react-toastify";
 
 import Home from "./home";
 
@@ -19,7 +19,17 @@ class App extends Component {
     this.ShowCat = this.ShowCat.bind(this);
 
     this.state = {
-      list: [],
+      list: [
+        { done: false, name: "Buy Bannana", type: "Groceries", id: 1 },
+        { done: false, name: "Buy vegetables", type: "Groceries", id: 2 },
+        { done: false, name: "Buy books", type: "Bookshop", id: 3 },
+        {
+          done: false,
+          name: "Check tech prices",
+          type: "Internet surfing",
+          id: 4,
+        },
+      ],
       isModalOpen: false,
       ShowDone: false,
       ShowUnDone: false,
@@ -27,27 +37,37 @@ class App extends Component {
     };
   }
 
-  async componentDidMount() {
-    //Call Backend
-    let { data } = await axios.get("http://localhost:3000/list");
-
-    //Set State
-    this.setState({ list: data });
-  }
+  // async componentDidMount() {
+  //   //Call Backend
+  //   let { data } = await axios.get("http://localhost:3000/list");
+  //   console.log(data);
+  //   //Set State
+  //   this.setState({ list: data });
+  // }
 
   // state = {
   //   list: [
-  //     { done: true, name: "Buy Bannana", type: "Groceries" },
-  //     { done: true, name: "Buy vegetables", type: "Groceries" },
-  //     { done: true, name: "Buy books", type: "Bookshop" },
-  //     { done: true, name: "Check tech prices", type: "Internet surfing" },
-  //     { done: true, name: "Calling mom", type: "PhoneCall" },
+  //     { done: true, name: "Buy Bannana", type: "Groceries", id: 1 },
+  //     { done: true, name: "Buy vegetables", type: "Groceries", id: 2 },
+  //     { done: true, name: "Buy books", type: "Bookshop", id: 3 },
+  //     { done: true, name: "Check tech prices", type: "Internet surfing", id: 4 },
+  //     { done: true, name: "Calling mom", type: "PhoneCall", id: 5 },
   //   ],
   //   isModalOpen: false,
   //   ShowDone: false,
   //   ShowUnDone: false,
   //   SelectedCat: "",
   // };
+  handleAdd = (item) => {
+    //Clone
+    let list = [...this.state.list];
+    //Edit
+    list.push(item);
+    console.log(list);
+    //Set state
+    this.setState({ list });
+    this.toggleModal();
+  };
 
   handleInDone = async (item) => {
     //Clone
@@ -63,67 +83,67 @@ class App extends Component {
     //Delete ID
     //delete list[index].id;
 
-    await axios.put(
-      "http://localhost:3000/list/" + list[index].id,
-      list[index]
-    );
+    // await axios.put(
+    //   "http://localhost:3000/list/" + list[index].id,
+    //   list[index]
+    // );
   };
 
   handleDelete = async (item) => {
     //Clone
-    const oldList = [...this.state.list];
+    //const oldList = [...this.state.list];
     const list = this.state.list.filter((i) => i.id !== item.id);
     this.setState({ list });
-    try {
-      //Call B
-      await axios.delete("http://localhost:3000/list/" + item.id);
-    } catch (ex) {
-      toast("Cant Delete");
-      this.setState({ list: oldList });
-    }
+    // try {
+    //   //Call B
+    //   await axios.delete("http://localhost:3000/list/" + item.id);
+    // } catch (ex) {
+    //   toast("Cant Delete");
+    //   this.setState({ list: oldList });
+    // }
   };
 
   DeleteAll = async () => {
-    const oldList = [...this.state.list];
-    let i;
+    //const oldList = [...this.state.list];
+    //let i;
 
     // -------------- Delete Done items
     if (this.state.ShowDone) {
       const list = this.state.list.filter((item) => item.done === false);
       //console.log(oldList[0]);
       this.setState({ list });
-      for (i = 1; i < oldList.length + 1; i++) {
-        try {
-          if (oldList[i - 1].done) {
-            await axios.delete("http://localhost:3000/list/" + i);
-          } else {
-            continue;
-          }
-        } catch (ex) {
-          toast("Cant Delete");
-          this.setState({ list: oldList });
-        }
-      }
-      window.location.reload(false);
+      // for (i = 1; i < oldList.length + 1; i++) {
+      //   try {
+      //     if (oldList[i - 1].done) {
+      //       await axios.delete("http://localhost:3000/list/" + i);
+      //     } else {
+      //       continue;
+      //     }
+      //   } catch (ex) {
+      //     toast("Cant Delete");
+      //     this.setState({ list: oldList });
+      //   }
+      // }
+      // window.location.reload(false);
     }
     // -------------- Delete UnDone items
     else if (this.state.ShowUnDone) {
       const list = this.state.list.filter((item) => item.done === true);
       //console.log(oldList[0]);
       this.setState({ list });
-      for (i = 1; i < oldList.length + 1; i++) {
-        try {
-          if (oldList[i - 1].done === false) {
-            await axios.delete("http://localhost:3000/list/" + i);
-          } else {
-            continue;
-          }
-        } catch (ex) {
-          toast("Cant Delete");
-          this.setState({ list: oldList });
-        }
-      }
-      window.location.reload(false);
+      // for (i = 1; i < oldList.length + 1; i++) {
+      //   try {
+      //     if (oldList[i - 1].done === false) {
+      //       await axios.delete("http://localhost:3000/list/" + i);
+      //     } else {
+      //       continue;
+      //     }
+      //   } catch (ex) {
+      //     toast("Cant Delete");
+      //     this.setState({ list: oldList });
+      //   }
+      // }
+      // window.location.reload(false);
     }
     // -------------- Delete Category items
     else if (this.state.SelectedCat !== "") {
@@ -132,33 +152,33 @@ class App extends Component {
       );
       //console.log(oldList[0]);
       this.setState({ list });
-      for (i = 1; i < oldList.length + 1; i++) {
-        try {
-          if (oldList[i - 1].type === this.state.SelectedCat) {
-            await axios.delete("http://localhost:3000/list/" + i);
-          } else {
-            continue;
-          }
-        } catch (ex) {
-          toast("Cant Delete");
-          this.setState({ list: oldList });
-        }
-      }
-      window.location.reload(false);
+      // for (i = 1; i < oldList.length + 1; i++) {
+      //   try {
+      //     if (oldList[i - 1].type === this.state.SelectedCat) {
+      //       await axios.delete("http://localhost:3000/list/" + i);
+      //     } else {
+      //       continue;
+      //     }
+      //   } catch (ex) {
+      //     toast("Cant Delete");
+      //     this.setState({ list: oldList });
+      //   }
+      // }
+      // window.location.reload(false);
     }
     // -------------- Delete All items
     else {
       const list = [];
       this.setState({ list });
-      for (i = 0; i < oldList.length + 1; i++) {
-        try {
-          await axios.delete("http://localhost:3000/list/" + i);
-        } catch (ex) {
-          toast("Cant Delete");
-          this.setState({ list: oldList });
-        }
-      }
-      window.location.reload(false);
+      // for (i = 0; i < oldList.length + 1; i++) {
+      //   try {
+      //     await axios.delete("http://localhost:3000/list/" + i);
+      //   } catch (ex) {
+      //     toast("Cant Delete");
+      //     this.setState({ list: oldList });
+      //   }
+      // }
+      // window.location.reload(false);
     }
   };
 
@@ -203,6 +223,7 @@ class App extends Component {
   }
 
   render() {
+    //let lastId = this.state.list[this.state.list.length - 1].id + 1;
     return (
       <React.Fragment>
         <NavBar />
@@ -235,6 +256,8 @@ class App extends Component {
                       ShowDone={this.state.ShowDone}
                       ShowUnDone={this.state.ShowUnDone}
                       SelectedCat={this.state.SelectedCat}
+                      Add={this.handleAdd}
+                      lastItemId={this.props.lastItemId}
                     />
                   )}
                 />
